@@ -16,7 +16,7 @@ rl.question("Enter the file name:", (fileName) => {
         console.log("File tested: " + fileName)
         console.log("Is SAT!")
         console.log("One satisfying sssignment is: |" + result.satisfyingAssignment.toString().replace(/,/g, "|") + "|")
-        console.log("Execution time: " + (t1 - t0) + "ms")
+        console.log("Execution time: " + ((t1 - t0)/1000).toFixed(5) + "s")
         console.log("------------------------------------------------------------------------")
     } else if (result.satisfyingAssignment == 'SpecificationProblemFound') {
         console.log("A specification problem was found in the" + fileName + "file!")
@@ -24,7 +24,7 @@ rl.question("Enter the file name:", (fileName) => {
     } else {
         console.log("File tested: " + fileName)
         console.log("Is not SAT!")
-        console.log("Execution time: " + (t1 - t0) + "ms")
+        console.log("Execution time: " + ((t1 - t0)/1000).toFixed(5) + "s")
         console.log("------------------------------------------------------------------------")
     }
     rl.close()
